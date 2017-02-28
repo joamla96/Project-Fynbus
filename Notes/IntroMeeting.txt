@@ -1,0 +1,20 @@
+Concept Folder on Website
+
+Flex Traffic: mini busses, ?taxis, handicaped, rehabilitation ect.
+ => What needs to be solved
+
+Owner = Municipality => Region Syddanmark
+
+Owner set amount of money for flex traffic ^^
+Fynbus administers how the money is spent, planning routes ect
+
+Fynbus does not own the busses+stuff
+ => Makes public ten??/pecurement, presented to private companies who then offer to drive the routes
+
+Case: Flextraffic
+Fynbus sets requirements, eg. need 15 cars at X, that can be used for some amount of hours.
+
+System plans routes (every 10 seconds) and looks into which cars are available.
+
+Change system from hour price => total contract price.
+Need to be able to document how the program works.
