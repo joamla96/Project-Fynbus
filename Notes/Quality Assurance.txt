@@ -23,3 +23,5 @@ Quality Assurance:
  - Ensure important items are in the report, not the appendex
  - Ensure page numbering, Table Of Content, ect...
  - Proper gramma and spellings (see group contract for language details)
+ - Logical progression
+ - References to explantations in appendix
