@@ -1,9 +1,25 @@
 Quality Assurance:
 
-Check all artifacts against their criterias.
+1. Check all artifacts against their criterias.
+ - Ensure that it follows UML standards
+ - Easy to understand < ensure artifacts are not overly complicated
+ - Ensure follows code
+ - Ensure follows use cases
 
-Ensure proper usecases.
+2. Ensure proper usecases.
+ - Ensure have actor(s)
+ - One case; one action
+ - Basic and short; but detailed enough
 
-Dont code it, if there is not a test for it.
+3. Dont code it, if there is not a test for it.
+ - Only check one thing
+ - Ensure tests check special cases
+ - Clean objective
+ - Ensure proper titles/headers
 
-Report - Split in Report / Appendix & use references.
+4. Report - Split in Report / Appendix & use references.
+ - Does it explain why things are the way they are
+ - Ensure report reaches pagecount
+ - Ensure important items are in the report, not the appendex
+ - Ensure page numbering, Table Of Content, ect...
+ - Proper gramma and spellings (see group contract for language details)
