@@ -1,0 +1,9 @@
+Quality Assurance:
+
+Check all artifacts against their criterias.
+
+Ensure proper usecases.
+
+Dont code it, if there is not a test for it.
+
+Report - Split in Report / Appendix & use references.
