@@ -1,0 +1,10 @@
+Criterias for PBis's to be Done
+ - All its tasks should be done
+ - P.O. Accepts
+
+Criterias for Tasks to be Done
+ - One thing
+ - One person
+ - Simple & but very understandable
+ - Max 1 day
+ - QA'ed
