@@ -1,0 +1,12 @@
+What FlexTrafik offers their customers
+
+FlexTrafik has 2 different Customer Segments, the goverment (municipality), and the citizen.
+
+Goverment:
+ - Deals with Tendering (Getting the offers)
+ - Interested in transporting citizens
+
+Citizens
+ - Transport available
+ - Right times
+ - Right places
