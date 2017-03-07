@@ -18,5 +18,3 @@ System plans routes (every 10 seconds) and looks into which cars are available.
 
 Change system from hour price => total contract price.
 Need to be able to document how the program works.
-
-Matt was here...

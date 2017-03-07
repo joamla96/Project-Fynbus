@@ -2,11 +2,19 @@ What FlexTrafik offers their customers
 
 FlexTrafik has 2 different Customer Segments, the goverment (municipality), and the citizen.
 
+FlexTrafik handles the use of mini busses, taxies, handicap transport to rehabilitation centers and doctors.
+
 Goverment:
  - Deals with Tendering (Getting the offers)
  - Interested in transporting citizens
+
+ - Sets amount of money available
 
 Citizens
  - Transport available
  - Right times
  - Right places
+
+Fynbus 
+ - Sets requirements
+   (eg. need 15 cars at OBC, available for 5 hours)
