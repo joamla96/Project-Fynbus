@@ -1,6 +1,6 @@
 What FlexTrafik offers their customers
 
-FlexTrafik has 2 different Customer Segments, the goverment (municipality), and the citizen.
+FlexTrafik has 2 different Customer Segments, the goverment (Municipality/region Syddanmark), and the citizen.
 
 FlexTrafik handles the use of mini busses, taxies, handicap transport to rehabilitation centers and doctors.
 
