@@ -1,0 +1,10 @@
+Amending group contract, to include programming criteras
+ - Naming Conventions
+ - Architecture
+
+Amendment approved by a 4-win vote, 1 absent
+Matthew: For
+Hedviga: For
+Roxana.: For
+Jonas..: For
+Surer..: Absent
