@@ -1,0 +1,17 @@
+Name: Import Information
+
+Primary Actor:
+ - FlexTraffik Employee, aka the "user".
+
+Description:
+User imports the excel sheets, containing all offers and the routes for the tenders, into the program.
+
+Preconditions:
+ - Excel sheets are formatted as expected for the program.
+ - Offers sheet should match the tender
+ - ?? Routing information exists for Route Numbers and Car Types ??
+
+Success Flow (Files imported successfully):
+ - User selects offer
+
+Alternate Flows:

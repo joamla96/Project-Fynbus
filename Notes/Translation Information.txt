@@ -1,0 +1,5 @@
+Vedståelse v2 = Amount of vehicles (Type 2) they can guarrantee
+
+RouteingNumbers contains: Router Numbers and Vehicle Type required.
+
+Garantivognnummer = Router Nr ??
