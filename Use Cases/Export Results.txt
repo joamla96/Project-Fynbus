@@ -1,11 +1,17 @@
 Name: Export Results
 
 Description:
+After the program has orderd the offers, the systems allows an export to variois other file formats.
 
 Primary Actor:
+- User
 
 Preconditions:
+ - Offers listed successfully.
 
 Success Flow:
+ - User sees ordering is done
+ - User clicks export button, and selects export format
 
 Alternate Flows:
+ - None
