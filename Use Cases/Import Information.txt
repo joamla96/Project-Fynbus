@@ -10,8 +10,16 @@ Preconditions:
  - Excel sheets are formatted as expected for the program.
  - Offers sheet should match the tender
  - ?? Routing information exists for Route Numbers and Car Types ??
+ - Information about Contractors exists
 
 Success Flow (Files imported successfully):
- - User selects offer
+ - User selects offer lists
+ - Press Import
+ - Sends message, import was successfull
 
 Alternate Flows:
+ - File not formatted properly
+   - Display warning
+
+ - Mis-coalation between data
+   - Display warning
