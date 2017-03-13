@@ -1,11 +1,21 @@
 Name: Generate Results
 
 Description:
+After Offers has been imported, the program orders the offers according to the criteria
 
 Primary Actor:
+ - Program
 
 Preconditions:
+ - Import was a Success
 
 Success Flow:
+ - Offers are orderd by Total Contract Value
+ - Ensure contractors can still carry their promises
 
 Alternate Flows:
+ - No offers on some routes
+   - Display a notice on screen
+
+ - Contractor unable to carry amount of promised vehicles
+   - Edit contractor information and try again
