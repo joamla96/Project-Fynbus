@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>160</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Contractor
+--
+int ID
+string Name
+string Company
+string Email
+dictionary&lt;int, int&gt; Types
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>160</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Offer
+--
+int ID
+int CarNr
+int PriceH
+Contractor Contractor
+int RoutePrio
+int ContractorPrio
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>160</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+</diagram>
