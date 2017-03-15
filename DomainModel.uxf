@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>160</y>
+      <x>360</x>
+      <y>150</y>
       <w>270</w>
       <h>120</h>
     </coordinates>
@@ -22,8 +22,8 @@ dictionary&lt;int, int&gt; Types
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>160</y>
+      <x>800</x>
+      <y>150</y>
       <w>210</w>
       <h>140</h>
     </coordinates>
@@ -42,8 +42,8 @@ int ContractorPrio
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>160</y>
+      <x>620</x>
+      <y>150</y>
       <w>200</w>
       <h>40</h>
     </coordinates>
