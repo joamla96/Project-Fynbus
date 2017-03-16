@@ -5,18 +5,16 @@
     <id>UMLClass</id>
     <coordinates>
       <x>360</x>
-      <y>150</y>
+      <y>160</y>
       <w>270</w>
-      <h>170</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Contractor
 --
-int ID
-string Name
-string Company
-string Email
-dictionary&lt;int, int&gt; Types
-list&lt;offer&gt; OffersWon
+ID
+Name
+Company
+Email
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -24,18 +22,17 @@ list&lt;offer&gt; OffersWon
     <id>UMLClass</id>
     <coordinates>
       <x>800</x>
-      <y>150</y>
+      <y>160</y>
       <w>210</w>
-      <h>140</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Offer
 --
-int ID
-int CarNr
-int PriceH
-Contractor WinningContractor
-int RoutePrio
-int ContractorPrio
+ID
+CarNr
+PriceH
+RoutePrio
+ContractorPrio
 --
 </panel_attributes>
     <additional_attributes/>
@@ -44,7 +41,7 @@ int ContractorPrio
     <id>Relation</id>
     <coordinates>
       <x>620</x>
-      <y>150</y>
+      <y>160</y>
       <w>200</w>
       <h>40</h>
     </coordinates>
