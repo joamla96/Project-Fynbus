@@ -1,13 +1,12 @@
 Export Formats:
 	PDFs
-and their respective layouts
+and their respective layouts > Same as old program
 
-How does Garantivognnr Relate to Type?
+How does Garantivognnr Relate to Type? > Email
 
-Routenr/contractor prio?
+Routenr/contractor prio? > Email
 
-FlexTraffik / FlexDanmark !?
+FlexTraffik / FlexDanmark / FynBus !?
+FynBus Runs FlexTraffik, with others
 
-
-
-Lene? > Business Analysis (Business Model) for FynBus or FlexTraffik
+Lene? > Business Analysis (Business Model) for FynBus or => FlexTraffik <=
