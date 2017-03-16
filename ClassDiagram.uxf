@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>9</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>432</y>
-      <w>243</w>
-      <h>108</h>
+      <x>456</x>
+      <y>304</y>
+      <w>216</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Contractor
 --
@@ -16,49 +16,50 @@ string Name
 string Company
 string Email
 dictionary&lt;int, int&gt; Types
+List&lt;Offer&gt; Offers
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>432</y>
-      <w>189</w>
-      <h>144</h>
+      <x>808</x>
+      <y>304</y>
+      <w>168</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Offer
 --
 int ID
 int CarNr
 int PriceH
-Contractor Contractor
+Contractor WinningContractor
 int RoutePrio
 int ContractorPrio
 --
-CompareTo(object)</panel_attributes>
+CompareTo(object OtherOffer)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>432</y>
-      <w>180</w>
-      <h>36</h>
+      <x>664</x>
+      <y>304</y>
+      <w>160</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
+m1=0..1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1647</x>
-      <y>90</y>
-      <w>90</w>
-      <h>27</h>
+      <x>1504</x>
+      <y>0</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>/AbstractClass/
 </panel_attributes>
@@ -67,10 +68,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>27</x>
-      <y>432</y>
-      <w>279</w>
-      <h>72</h>
+      <x>64</x>
+      <y>304</y>
+      <w>248</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>ContractorRepository
 --
@@ -82,10 +83,10 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>297</x>
-      <y>432</y>
-      <w>189</w>
-      <h>36</h>
+      <x>304</x>
+      <y>304</y>
+      <w>168</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -95,10 +96,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1170</x>
-      <y>432</y>
-      <w>279</w>
-      <h>72</h>
+      <x>1080</x>
+      <y>304</y>
+      <w>248</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>OfferRepository
 --
@@ -110,10 +111,10 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1044</x>
-      <y>432</y>
-      <w>144</w>
-      <h>36</h>
+      <x>968</x>
+      <y>304</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -123,10 +124,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>909</x>
-      <y>324</y>
-      <w>90</w>
-      <h>27</h>
+      <x>848</x>
+      <y>208</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>/IComparable/
 </panel_attributes>
@@ -135,10 +136,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>945</x>
-      <y>342</y>
-      <w>27</w>
-      <h>108</h>
+      <x>880</x>
+      <y>224</y>
+      <w>24</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
