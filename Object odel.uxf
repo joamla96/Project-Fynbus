@@ -4,24 +4,24 @@
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>72</y>
-      <w>153</w>
+      <x>369</x>
+      <y>81</y>
+      <w>225</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>16-3460
 Name A
 Company A
 maila@A.dk
-Type 2
+Type: 2, 2; 3, 0; 5, 0; 6, 0; 7, 0
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>819</x>
-      <y>9</y>
+      <x>441</x>
+      <y>18</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -31,8 +31,8 @@ Type 2
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1098</x>
-      <y>9</y>
+      <x>756</x>
+      <y>18</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -42,56 +42,59 @@ Type 2
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>504</y>
-      <w>153</w>
+      <x>378</x>
+      <y>513</y>
+      <w>216</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>16-3944
 Name D
 Company D
 maild@D.dk
-Type 7
+Type: 2, 3; 3, 0; 5, 1; 6, 0; 7, 0
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>216</y>
-      <w>153</w>
+      <x>378</x>
+      <y>225</y>
+      <w>216</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>16-3788
 Name B
 Company B
 mailb@B.dk
-Type 5
+Type: 2, 0; 3, 1; 5, 2; 6, 0; 7, 0
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>360</y>
-      <w>153</w>
+      <x>378</x>
+      <y>369</y>
+      <w>216</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>16-3768
 Name C
 Company C
 mailc@C.dk
-Type 3
+Type: 2, 1; 3, 0; 5, 0; 6, 0; 7, 1
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>504</y>
+      <x>720</x>
+      <y>513</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -107,8 +110,8 @@ Type 3
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>72</y>
+      <x>720</x>
+      <y>81</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -124,8 +127,8 @@ Type 3
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>216</y>
+      <x>720</x>
+      <y>225</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -141,8 +144,8 @@ Type 3
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>360</y>
+      <x>720</x>
+      <y>369</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -158,8 +161,8 @@ Type 3
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>936</x>
-      <y>126</y>
+      <x>585</x>
+      <y>135</y>
       <w>153</w>
       <h>36</h>
     </coordinates>
@@ -169,30 +172,8 @@ Type 3
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>927</x>
-      <y>162</y>
-      <w>171</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;170.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>927</x>
-      <y>306</y>
-      <w>171</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;170.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>927</x>
-      <y>450</y>
+      <x>585</x>
+      <y>144</y>
       <w>162</w>
       <h>135</h>
     </coordinates>
@@ -200,10 +181,32 @@ Type 3
     <additional_attributes>10.0;10.0;160.0;130.0</additional_attributes>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>288</y>
+      <w>162</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;160.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>432</y>
+      <w>153</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;150.0;160.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>648</y>
+      <x>720</x>
+      <y>657</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -219,8 +222,8 @@ Type 3
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1071</x>
-      <y>792</y>
+      <x>720</x>
+      <y>801</y>
       <w>153</w>
       <h>135</h>
     </coordinates>
@@ -236,27 +239,27 @@ Type 3
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>909</x>
-      <y>612</y>
-      <w>189</w>
-      <h>234</h>
+      <x>567</x>
+      <y>603</y>
+      <w>180</w>
+      <h>252</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;190.0;240.0</additional_attributes>
+    <additional_attributes>15.0;10.0;180.0;260.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>792</x>
-      <y>648</y>
-      <w>153</w>
+      <x>369</x>
+      <y>657</y>
+      <w>225</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>16-3943
 Name E
 Company E
 maile@E.dk
-Type 6
+Type: 2, 2; 3, 0; 5, 0; 6, 1; 7, 0
 </panel_attributes>
     <additional_attributes/>
   </element>
