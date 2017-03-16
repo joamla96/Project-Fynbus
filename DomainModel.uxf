@@ -7,7 +7,7 @@
       <x>360</x>
       <y>150</y>
       <w>270</w>
-      <h>120</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Contractor
 --
@@ -16,6 +16,7 @@ string Name
 string Company
 string Email
 dictionary&lt;int, int&gt; Types
+list&lt;offer&gt; OffersWon
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -32,7 +33,7 @@ dictionary&lt;int, int&gt; Types
 int ID
 int CarNr
 int PriceH
-Contractor Contractor
+Contractor WinningContractor
 int RoutePrio
 int ContractorPrio
 --
@@ -48,7 +49,7 @@ int ContractorPrio
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
+m1=0..1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
   </element>
