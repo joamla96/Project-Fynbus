@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>8</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>456</x>
-      <y>304</y>
-      <w>216</w>
-      <h>128</h>
+      <x>378</x>
+      <y>469</y>
+      <w>189</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Contractor
 --
-int ID
-string Name
-string Company
-string Email
-dictionary&lt;int, int&gt; Types
-List&lt;Offer&gt; Offers
+ID: integer
+Name: string
+Company: string
+Email: string 
+Types: dictionary&lt;int, int&gt; 
+Offers: list&lt;Offer&gt; 
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>808</x>
-      <y>304</y>
-      <w>168</w>
-      <h>128</h>
+      <x>686</x>
+      <y>469</y>
+      <w>147</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Offer
 --
-int ID
-int CarNr
-int PriceH
-Contractor WinningContractor
-int RoutePrio
-int ContractorPrio
+ID: integer
+CarNr: integer
+PriceH: integer
+WinningContractor: Contractor 
+RoutePrio: integer
+ContractorPrio: integer
 --
 CompareTo(object OtherOffer)</panel_attributes>
     <additional_attributes/>
@@ -43,10 +43,10 @@ CompareTo(object OtherOffer)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>664</x>
-      <y>304</y>
-      <w>160</w>
-      <h>32</h>
+      <x>560</x>
+      <y>469</y>
+      <w>140</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -56,26 +56,14 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1504</x>
-      <y>0</y>
-      <w>80</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>/AbstractClass/
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>64</x>
-      <y>304</y>
-      <w>248</w>
-      <h>64</h>
+      <x>35</x>
+      <y>469</y>
+      <w>217</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>ContractorRepository
 --
-Dictionary&lt;int, Contractor&gt; Contractors
+Contractors: dictionary&lt;int, Contractor&gt; 
 --
 CRUD (ID, NewValue);</panel_attributes>
     <additional_attributes/>
@@ -83,27 +71,27 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>304</x>
-      <y>304</y>
-      <w>168</w>
-      <h>32</h>
+      <x>245</x>
+      <y>469</y>
+      <w>147</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..1
+m1=1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>304</y>
-      <w>248</w>
-      <h>64</h>
+      <x>924</x>
+      <y>469</y>
+      <w>217</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>OfferRepository
 --
-Dictionary&lt;int, Offer&gt; Offers
+Offers: dictionary &lt;int, offer&gt;
 --
 CRUD (ID, NewValue);</panel_attributes>
     <additional_attributes/>
@@ -111,35 +99,36 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>968</x>
-      <y>304</y>
-      <w>128</w>
-      <h>32</h>
+      <x>826</x>
+      <y>469</y>
+      <w>112</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..1
+m1=1
 m2=0..n</panel_attributes>
     <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>848</x>
-      <y>208</y>
-      <w>80</w>
-      <h>24</h>
+      <x>721</x>
+      <y>378</y>
+      <w>70</w>
+      <h>28</h>
     </coordinates>
-    <panel_attributes>/IComparable/
+    <panel_attributes>Interface
+/IComparable/
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>880</x>
-      <y>224</y>
-      <w>24</w>
-      <h>96</h>
+      <x>749</x>
+      <y>399</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
