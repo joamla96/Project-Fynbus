@@ -10,3 +10,6 @@ FlexTraffik / FlexDanmark / FynBus !?
 FynBus Runs FlexTraffik, with others
 
 Lene? > Business Analysis (Business Model) for FynBus or => FlexTraffik <=
+------------------------
+
+Sequence Nr: Format? Year-Number?
