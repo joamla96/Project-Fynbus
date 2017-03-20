@@ -27,14 +27,14 @@ namespace Core.UnitTests {
 		}
 
 		[TestMethod]
-		public void CreateOfferFromObject() {
+		public void AddOfferFromObject() {
 			RepoOffers.AddOffer(_TestOffer1);
 			List<Offer> OffersList = RepoOffers.GetAllOffers();
 			Assert.IsTrue(OffersList.Contains(_TestOffer1));
 		}
 
 		[TestMethod]
-		public void CreateOfferFromText() {
+		public void AddOfferFromText() {
 			RepoOffers.AddOffer(160867, 1, 284, _TestContractor1, 0, 0);
 			Offer CompareOffer = RepoOffers.GetOfferByID(160867);
 			Assert.AreEqual(_TestOffer1, CompareOffer); // Override the Equals method on Offer Class
