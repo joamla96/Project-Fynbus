@@ -13,3 +13,13 @@ Lene? > Business Analysis (Business Model) for FynBus or => FlexTraffik <=
 ------------------------
 
 Sequence Nr: Format? Year-Number?
+
+TotalContractValue, Garantiperiode or Rådighedsperiode ??
+
+Total Contract Value... WTF, seriously!?
+
+TCV, is it?
+A. Price/hr * time run for the whole contract period
+B. How much it's going to cost to hire a specific contractor
+
+Why chaning from price/hr to total contract value? What effect are you expecting?
