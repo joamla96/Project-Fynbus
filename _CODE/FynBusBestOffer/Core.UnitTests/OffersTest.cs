@@ -84,25 +84,25 @@ namespace Core.UnitTests {
 			Assert.AreEqual(TotalContractValue, 300);
 		}
 
-		[TestMethod]
-		public void GetRightOffersFromOfferRepo() {
-			_repoOffers.Add(_testOffer1);
-			_repoOffers.Add(_testOffer2);
-			_repoOffers.Add(_testOffer3);
-			_repoOffers.Add(_testOffer4);
-			_repoOffers.Add(_testOffer5);
-			_repoOffers.Add(_testOffer6);
-			_repoOffers.Add(_testOffer7);
+		//[TestMethod]
+		//public void GetRightOffersFromOfferRepo() {
+		//	_repoOffers.Add(_testOffer1);
+		//	_repoOffers.Add(_testOffer2);
+		//	_repoOffers.Add(_testOffer3);
+		//	_repoOffers.Add(_testOffer4);
+		//	_repoOffers.Add(_testOffer5);
+		//	_repoOffers.Add(_testOffer6);
+		//	_repoOffers.Add(_testOffer7);
 
-			List<Offer> Offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
+		//	List<Offer> Offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
 
-			Assert.IsTrue(Offers.Contains(_testOffer1));
-			Assert.IsTrue(Offers.Contains(_testOffer2));
-			Assert.IsFalse(Offers.Contains(_testOffer3));
-			Assert.IsFalse(Offers.Contains(_testOffer4));
-			Assert.IsFalse(Offers.Contains(_testOffer5));
-			Assert.IsFalse(Offers.Contains(_testOffer6));
-			Assert.IsFalse(Offers.Contains(_testOffer7));
-		}
+		//	Assert.IsTrue(Offers.Contains(_testOffer1));
+		//	Assert.IsTrue(Offers.Contains(_testOffer2));
+		//	Assert.IsFalse(Offers.Contains(_testOffer3));
+		//	Assert.IsFalse(Offers.Contains(_testOffer4));
+		//	Assert.IsFalse(Offers.Contains(_testOffer5));
+		//	Assert.IsFalse(Offers.Contains(_testOffer6));
+		//	Assert.IsFalse(Offers.Contains(_testOffer7));
+		//}
 	}
 }

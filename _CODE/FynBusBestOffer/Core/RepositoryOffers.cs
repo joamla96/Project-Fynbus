@@ -23,7 +23,7 @@ namespace Core {
             //Offer offer = new Offer( offerseqnr, carnr, priceperhour, contractor, routepriority, contractorpriority);
             //_offer.AddRange();
             
-            _offer.Add(new Offer(offerseqnr, route, priceperhour, contractor, routepriority, contractorpriority) { });
+           // _offer.Add(new Offer(offerseqnr, route, priceperhour, contractor, routepriority, contractorpriority) { });
         }
 
         public Offer GetOfferByID(int v)
