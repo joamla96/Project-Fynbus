@@ -73,13 +73,13 @@ namespace Core.UnitTests {
 
 		[TestMethod]
 		public void OrderOffersGetTotalContractValue1() {
-			double TotalContractValue = _TestOffer1.GetTotalContractValue(_TestRoute1);
+			double TotalContractValue = _TestOffer1.TotalContractValue; // Total Contract Value should be a property
 			Assert.AreEqual(TotalContractValue, 284);
 		}
 
 		[TestMethod]
 		public void OrderOffersGetTotalContractValue2() {
-			double TotalContractValue = _TestOffer2.GetTotalContractValue(_TestRoute1);
+			double TotalContractValue = _TestOffer2.TotalContractValue;
 
 			Assert.AreEqual(TotalContractValue, 300);
 		}
