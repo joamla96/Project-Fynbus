@@ -1,24 +1,38 @@
 == Ex 1 ==
 
 = 1.01 = Purpose
-
 Our project supports the Key Activities and Cost Structute, of FynBus
 
 = 1.02 = Preformance
-
 Key Activities
  - Reducing time spent on the selection process, from the tender.
+ - Reduce Manual labor from selection process
 
 Cost Structure
  - Selecting the best offer, based on total contract value, and reducing operation price of FlexTraffik
 
 = 1.02b = Indicators
+Reducing time spent on selection process
+ - Time spent on selection process
+ - Amount of employees needed to deal with process
 
- - Reducing time spent on selection process
-   - Time spent on selection process
-   - Amount of employees needed to deal with process
+Less Manual Labor
+ - Happier workers, based on employee satisfaction surverys
+ - Productivity Increases
 
- - Selecting the best offer
-   - Operation costs goes down
-   - FynBus does not get indicted for selecting wrong contractors
+Selecting the best offer
+ - Operation costs goes down
+ - FynBus does not get indicted for selecting wrong contractors
+
+= 1.03 = Key
+ - FlexTraffik Operations Costs
+ - Time spent on Selection Process
+ - Amount of Emoloyees needed
+ - FynBus Indictment
+ - Productivity Increase
+ - Worker Happiness
+
+== Ex 2 - Smart Goals ==
+
+
 
