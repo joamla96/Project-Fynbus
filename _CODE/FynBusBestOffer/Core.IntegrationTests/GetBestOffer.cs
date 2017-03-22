@@ -36,13 +36,13 @@ namespace Core.IntegrationTests
 
 		[TestInitialize]
 		public void PrepareTests() {
-			_repoOffers = RepositoryOffers.GetInstance(); // Singletons
+			_repoOffers = RepositoryOffers.Instance; // Singletons
 			_repoOffers.Clear();
 
-			_repoRoutes = RepositoryRoutes.GetInstance();
+			_repoRoutes = RepositoryRoutes.Instance;
 			_repoRoutes.Clear();
 
-			_repoContractors = RepositoryContractors.GetInstance();
+			_repoContractors = RepositoryContractors.Instance;
 			_repoContractors.Clear();
 
 			_repoOffers.Add(_testOffer1);
