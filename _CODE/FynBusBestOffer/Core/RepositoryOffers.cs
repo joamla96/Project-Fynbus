@@ -18,12 +18,12 @@ namespace Core {
             return _offer;
         }
 
-        public void AddOffer(int offerseqnr, int carnr, int priceperhour, Contractor contractor, int routepriority, int contractorpriority)
+        public void AddOffer(int offerseqnr, Route route, int priceperhour, Contractor contractor, int routepriority, int contractorpriority)
         {
             //Offer offer = new Offer( offerseqnr, carnr, priceperhour, contractor, routepriority, contractorpriority);
             //_offer.AddRange();
             
-            _offer.(offerseqnr, carnr, priceperhour, contractor, routepriority, contractorpriority);
+            _offer.Add(new Offer(offerseqnr, route, priceperhour, contractor, routepriority, contractorpriority) { });
         }
 
         public Offer GetOfferByID(int v)
@@ -37,6 +37,12 @@ namespace Core {
         }
 
         public void DeleteOffer(Contractor contractor)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void Clear()
         {
             throw new NotImplementedException();
         }
