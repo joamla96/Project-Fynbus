@@ -83,5 +83,11 @@ namespace Core.UnitTests {
 
 			Assert.AreEqual(TotalContractValue, 300);
 		}
+
+        [TestMethod]
+        public void OrderOffersByTotalContractValue()
+        {
+
+        }
 	}
 }
