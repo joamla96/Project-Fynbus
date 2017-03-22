@@ -104,11 +104,5 @@ namespace Core.UnitTests {
 			Assert.IsFalse(Offers.Contains(_testOffer6));
 			Assert.IsFalse(Offers.Contains(_testOffer7));
 		}
-
-		[TestMethod]
-		public void GetTheBestOfferFromList() {
-			Offer BestOffer = Route.GetBestOffer(_testRoute2); // Static method
-			Assert.AreEqual(BestOffer, _testOffer3);
-		}
 	}
 }
