@@ -13,6 +13,7 @@ namespace Core {
         private int RoutePriority;
         private int ContractorPriority;
         private Contractor Contractor;
+        public double TotalContractValue { get; set; }
 
         public Offer(int offerseqnr, int carnr, int priceperhour, Contractor contractor, int routepriority, int contractorpriority)
         {
