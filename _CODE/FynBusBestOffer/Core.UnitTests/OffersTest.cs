@@ -6,21 +6,22 @@ using System.Collections.Generic;
 namespace Core.UnitTests {
 
 	[TestClass]
-	public class OffersTest {
+	public class OffersTest
+	{
 		RepositoryOffers RepoOffers;
-										// SeqNr, Name, Company, Email, CarType 2, 3, 5, 6, 7
-		static Contractor _TestContractor1 = new Contractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] {0,0,2,0,0});
-		static Contractor _TestContractor2 = new Contractor();
+		// SeqNr, Name, Company, Email, CarType 2, 3, 5, 6, 7
+		static Contractor _TestContractor1 = new Contractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] { 0, 0, 2, 0, 0 });
+		static Contractor _TestContractor2 = new Contractor(163478, "Navn B", "Firma B", "Banana@Email.com", new int[] { 0, 0, 2, 0, 0 });
 		static Contractor _TestContractor3 = new Contractor();
 
-										// GarantiVognNr, Start, Type, Hours: Normal, Weekend, Holidays
+		// GarantiVognNr, Start, Type, Hours: Normal, Weekend, Holidays
 		static Route _TestRoute1 = new Route(2502, "OUH", 2, 9.5, 10.5, 9.5, 10.5, 9.5, 10.5);
-		static Route _TestRoute2 = new Route(2503, "OUH", 2, 9.5, 10.5, 0, 0, 0 , 0);
+		static Route _TestRoute2 = new Route(2503, "OUH", 2, 9.5, 10.5, 0, 0, 0, 0);
 		static Route _TestRoute3 = new Route(2504, "OUH", 2, 9.5, 10.5, 0, 0, 9.5, 10.5);
-		static Route _TestRoute4 = new Route(2505, "OUH", 2, 9.5, 10.5, 0,0,0,0);
+		static Route _TestRoute4 = new Route(2505, "OUH", 2, 9.5, 10.5, 0, 0, 0, 0);
 		static Route _TestRoute5 = new Route(2506, "Ørbækvej", 2, 9.5, 10.5, 0, 0, 0, 0);
 
-										// SeqNr, GarantiVognNr, Price/Hr, Contractor, RoutePrio, ContractorPrio
+		// SeqNr, GarantiVognNr, Price/Hr, Contractor, RoutePrio, ContractorPrio
 		static Offer _TestOffer1 = new Offer(160867, 2502, 284, _TestContractor1, 0, 0);
 		static Offer _TestOffer2 = new Offer(163900, 2502, 300, _TestContractor1, 0, 0);
 		static Offer _TestOffer3 = new Offer(161170, 2503, 123, _TestContractor1, 0, 0);
@@ -28,7 +29,7 @@ namespace Core.UnitTests {
 		static Offer _TestOffer5 = new Offer(167514, 2503, 789, _TestContractor2, 0, 0);
 		static Offer _TestOffer6 = new Offer(169856, 2504, 852, _TestContractor2, 0, 0);
 		static Offer _TestOffer7 = new Offer(160456, 2504, 479, _TestContractor3, 1, 0);
-		
+
 		[TestInitialize]
 		public void PrepareTests() {
 			RepoOffers = new RepositoryOffers();
@@ -80,14 +81,43 @@ namespace Core.UnitTests {
 		[TestMethod]
 		public void OrderOffersGetTotalContractValue2() {
 			double TotalContractValue = _TestOffer2.TotalContractValue;
-
 			Assert.AreEqual(TotalContractValue, 300);
 		}
 
-        [TestMethod]
-        public void OrderOffersByTotalContractValue()
-        {
+		[TestMethod]
+		public void GetRightOffersFromOfferRepo() {
+			RepoOffers.Add(_TestOffer1);
+			RepoOffers.Add(_TestOffer2);
+			RepoOffers.Add(_TestOffer3);
+			RepoOffers.Add(_TestOffer4);
+			RepoOffers.Add(_TestOffer5);
+			RepoOffers.Add(_TestOffer6);
+			RepoOffers.Add(_TestOffer7);
 
-        }
+			List<Offer> Offers = RepoOffers.getOffersByCarNr(_TestRoute1.CarNr);
+
+			Assert.IsTrue(Offers.Contains(_TestOffer1));
+			Assert.IsTrue(Offers.Contains(_TestOffer2));
+			Assert.IsFalse(Offers.Contains(_TestOffer3));
+			Assert.IsFalse(Offers.Contains(_TestOffer4));
+			Assert.IsFalse(Offers.Contains(_TestOffer5));
+			Assert.IsFalse(Offers.Contains(_TestOffer6));
+			Assert.IsFalse(Offers.Contains(_TestOffer7));
+		}
+
+		[TestMethod]
+		public void GetRightOffersFromOfferRepo() {
+			RepoOffers.Add(_TestOffer5);
+			RepoOffers.Add(_TestOffer3);
+			RepoOffers.Add(_TestOffer4);
+			List<Offer> Offers = RepoOffers.getOffersByCarNr(_TestRoute2.CarNr);
+
+			Offers.Sort(); // Implement IComparable Interface on Offers (Should mainly base on TotalContactValue Property)
+			Assert.AreEqual(Offers[0], _TestOffer3);
+			Assert.AreEqual(Offers[1], _TestOffer4);
+			Assert.AreEqual(Offers[2], _TestOffer5);
+		}
+
+
 	}
 }
