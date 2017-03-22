@@ -66,7 +66,7 @@ namespace Core.IntegrationTests
 
 		[TestMethod]
 		public void GetBestOffer() {
-
+			throw new NotImplementedException();
 		}
 	}
 }
