@@ -65,7 +65,7 @@ namespace Core.IntegrationTests
 		}
 
 		[TestMethod]
-		public void GetBestOffer() {
+		public void GetBestOfferByRoutes() {
 			throw new NotImplementedException();
 		}
 	}
