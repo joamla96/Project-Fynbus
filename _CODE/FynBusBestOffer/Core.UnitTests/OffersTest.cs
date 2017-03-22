@@ -44,7 +44,7 @@ namespace Core.UnitTests {
 
 		[TestMethod]
 		public void AddOfferFromText() {
-			_repoOffers.AddOffer(160867, 1, 284, _testContractor1, 0, 0);
+			_repoOffers.AddOffer(160867, _testRoute1, 284, _testContractor1, 0, 0);
 			Offer CompareOffer = _repoOffers.GetOfferByID(160867);
 			Assert.AreEqual(_testOffer1, CompareOffer); // Override the Equals method on Offer Class
 		}
