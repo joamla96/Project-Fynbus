@@ -22,13 +22,13 @@ namespace Core.UnitTests {
 		static Route _testRoute5 = new Route(2506, "Ørbækvej", 2, 9.5, 10.5, 0, 0, 0, 0);
 
 		// SeqNr, GarantiVognNr, Price/Hr, Contractor, RoutePrio, ContractorPrio
-		static Offer _testOffer1 = new Offer(160867, 2502, 284, _testContractor1, 0, 0);
-		static Offer _testOffer2 = new Offer(163900, 2502, 300, _testContractor1, 0, 0);
-		static Offer _testOffer3 = new Offer(161170, 2503, 123, _testContractor1, 0, 0);
-		static Offer _testOffer4 = new Offer(163905, 2503, 456, _testContractor2, 0, 0);
-		static Offer _testOffer5 = new Offer(167514, 2503, 789, _testContractor2, 0, 0);
-		static Offer _testOffer6 = new Offer(169856, 2504, 852, _testContractor2, 0, 0);
-		static Offer _testOffer7 = new Offer(160456, 2504, 479, _testContractor3, 1, 0);
+		static Offer _testOffer1 = new Offer(160867, _testRoute1, 284, _testContractor1, 0, 0);
+		static Offer _testOffer2 = new Offer(163900, _testRoute1, 300, _testContractor1, 0, 0);
+		static Offer _testOffer3 = new Offer(161170, _testRoute2, 123, _testContractor1, 0, 0);
+		static Offer _testOffer4 = new Offer(163905, _testRoute2, 456, _testContractor2, 0, 0);
+		static Offer _testOffer5 = new Offer(167514, _testRoute2, 789, _testContractor2, 0, 0);
+		static Offer _testOffer6 = new Offer(169856, _testRoute3, 852, _testContractor2, 0, 0);
+		static Offer _testOffer7 = new Offer(160456, _testRoute3, 479, _testContractor3, 1, 0);
 
 		[TestInitialize]
 		public void PrepareTests() {
