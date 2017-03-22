@@ -28,6 +28,7 @@ namespace Core.UnitTests {
 		static Offer _TestOffer5 = new Offer(167514, 2503, 789, _TestContractor2, 0, 0);
 		static Offer _TestOffer6 = new Offer(169856, 2504, 852, _TestContractor2, 0, 0);
 		static Offer _TestOffer7 = new Offer(160456, 2504, 479, _TestContractor3, 1, 0);
+
 		
 		[TestInitialize]
 		public void PrepareTests() {
