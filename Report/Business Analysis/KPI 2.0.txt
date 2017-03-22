@@ -34,5 +34,8 @@ Selecting the best offer
 
 == Ex 2 - Smart Goals ==
 
+= 2.01 = Criteria & Subcriteria
+Specific
+ - Understandable, using laymen terms
 
 
