@@ -63,7 +63,7 @@ namespace Core.UnitTests {
 		[TestMethod]
 		public void DeleteOfferByID() {
 			_repoOffers.AddOffer(_testOffer1);
-			_repoOffers.DeleteOffer(160867);
+			_repoOffers.DeleteOffer(_testOffer1.OfferSeqNr);
 			List<Offer> OffersList = _repoOffers.GetAllOffers();
 			Assert.AreEqual(0, OffersList.Count);
 		}
