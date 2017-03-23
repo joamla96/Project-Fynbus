@@ -37,17 +37,18 @@ namespace Core {
              return result;
              
         }
-        public Offer GetOfferByContractor(Contractor contractor)
+        public List<Offer> GetOffersByContractor(Contractor contractor)
         {
-            Offer result = null;
+            List<Offer> contractorOffers = new List<Offer>();
             foreach (Offer element in _offer)
             {
                 if (element.Contractor == contractor)
                 {
-                    result = element;
+                    contractorOffers.Add(element);
+
                 }
             }
-            return result;
+            return contractorOffers;
 
         }
         public void DeleteOffer(int offerseqnr)
@@ -58,8 +59,11 @@ namespace Core {
 
         public void DeleteOffer(Contractor contractor)
         {
-            Offer toDelete = this.GetOfferByContractor(contractor);
-            _offer.Remove(toDelete);
+            List<Offer> contractorOffers = this.GetOffersByContractor(contractor);
+            foreach(Offer element in contractorOffers)
+            {
+                _offer.Remove(element);
+            }
         }
 
 

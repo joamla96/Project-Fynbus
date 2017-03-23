@@ -13,7 +13,12 @@ namespace Core {
         public int RoutePriority;
         public int ContractorPriority;
         public Contractor Contractor;
-        public double TotalContractValue { get; set; }
+        public double TotalContractValue { get { return GetTotalContractValue(); } }
+
+        private double GetTotalContractValue()
+        {
+            return PricePerHour;
+        }
 
         public Offer(int offerseqnr, Route route, int priceperhour, Contractor contractor, int routepriority, int contractorpriority)
         {
@@ -30,7 +35,7 @@ namespace Core {
             Offer offer = (Offer)obj;
             if (this.OfferSeqNr == offer.OfferSeqNr)
             {
-                result = true;  
+                result = true;
             }
             return result;
         }
