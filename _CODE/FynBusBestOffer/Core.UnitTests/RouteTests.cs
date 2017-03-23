@@ -72,24 +72,24 @@ namespace Core.UnitTests
             Assert.AreEqual(0, routesList.Count);
         }
 
-        [TestMethod]
-        public void GetRoutesFromRouteRepoByCarType()
-        {
-            _repoRoutes.AddRoute(_testRoute1);
-            _repoRoutes.AddRoute(_testRoute2);
-            _repoRoutes.AddRoute(_testRoute3);
-            _repoRoutes.AddRoute(_testRoute4);
-            _repoRoutes.AddRoute(_testRoute5);
-            _repoRoutes.AddRoute(_testRoute6);
+        //[TestMethod]
+        //public void GetRoutesFromRouteRepoByCarType()
+        //{
+        //    _repoRoutes.AddRoute(_testRoute1);
+        //    _repoRoutes.AddRoute(_testRoute2);
+        //    _repoRoutes.AddRoute(_testRoute3);
+        //    _repoRoutes.AddRoute(_testRoute4);
+        //    _repoRoutes.AddRoute(_testRoute5);
+        //    _repoRoutes.AddRoute(_testRoute6);
 
-            List<Route> routes = _repoRoutes.GetRoutesByCarType(_testRoute1.CarType);
+        //    List<Route> routes = _repoRoutes.GetRoutesByCarType(_testRoute1.CarType);
 
-            Assert.IsTrue(routes.Contains(_testRoute1));
-            Assert.IsTrue(routes.Contains(_testRoute2));
-            Assert.IsTrue(routes.Contains(_testRoute3));
-            Assert.IsTrue(routes.Contains(_testRoute4));
-            Assert.IsTrue(routes.Contains(_testRoute5));
-            Assert.IsFalse(routes.Contains(_testRoute6));
-        }
+        //    Assert.IsTrue(routes.Contains(_testRoute1));
+        //    Assert.IsTrue(routes.Contains(_testRoute2));
+        //    Assert.IsTrue(routes.Contains(_testRoute3));
+        //    Assert.IsTrue(routes.Contains(_testRoute4));
+        //    Assert.IsTrue(routes.Contains(_testRoute5));
+        //    Assert.IsFalse(routes.Contains(_testRoute6));
+        //}
     }
 }
