@@ -59,8 +59,29 @@ namespace Core.UnitTests {
 			Assert.AreEqual(_testOffer1, compareOffer); // Override the Equals method on Offer Class
 		}
 
+        [TestMethod]
+        public void GetOfferByContractor()
+        {
+            _repoOffers.AddOffer(_testOffer1);
+            _repoOffers.AddOffer(_testOffer2);
+            _repoOffers.AddOffer(_testOffer3);
+            _repoOffers.AddOffer(_testOffer4);
+            _repoOffers.AddOffer(_testOffer5);
+            _repoOffers.AddOffer(_testOffer6);
+            _repoOffers.AddOffer(_testOffer7);
 
-		[TestMethod]
+            List<Offer> offers = _repoOffers.GetOffersByContractor(_testContractor1);
+
+            Assert.IsTrue(offers.Contains(_testOffer1));
+            Assert.IsTrue(offers.Contains(_testOffer2));
+            Assert.IsTrue(offers.Contains(_testOffer3));
+            Assert.IsFalse(offers.Contains(_testOffer4));
+            Assert.IsFalse(offers.Contains(_testOffer5));
+            Assert.IsFalse(offers.Contains(_testOffer6));
+            Assert.IsFalse(offers.Contains(_testOffer7));
+        }
+
+        [TestMethod]
 		public void DeleteOfferByID() {
 			_repoOffers.AddOffer(_testOffer1);
 			_repoOffers.DeleteOffer(_testOffer1.OfferSeqNr);
