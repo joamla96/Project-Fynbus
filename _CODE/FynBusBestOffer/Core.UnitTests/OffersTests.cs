@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Core.UnitTests {
 
 	[TestClass]
-	public class OffersTest
+	public class OffersTests
 	{
 		RepositoryOffers _repoOffers;
 		// SeqNr, Name, Company, Email, CarType 2, 3, 5, 6, 7
