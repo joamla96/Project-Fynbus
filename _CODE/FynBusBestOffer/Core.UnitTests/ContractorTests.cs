@@ -55,7 +55,18 @@ namespace Core.UnitTests
         [TestMethod]
         public void GetContractorByID()
         {
-            _repoContractors
+            _repoContractors.AddContractor(_testContractor1);
+            _repoContractors.AddContractor(_testContractor2);
+            _repoContractors.AddContractor(_testContractor3);
+
+            Contractor compareContractor = _repoContractors.GetContractorByID(_testContractor1.ContractorSeqNr);
+            Assert.AreEqual(_testContractor1, compareContractor);
+        }
+
+        [TestMethod]
+        public void DeleteContractorByID()
+        {
+            _repoContractors.AddContractor(_testContractor1);
         }
     }
 }
