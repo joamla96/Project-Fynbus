@@ -7,34 +7,46 @@ using System.Threading.Tasks;
 namespace Core {
     public class RepositoryRoutes
     {
-        public void AddRoute(Route _testRoute1)
+        List<Route> _route = new List<Route>();
+
+        public void AddRoute(Route route)
         {
-            throw new NotImplementedException();
+            _route.Add(route);
         }
 
         public List<Route> GetAllRoutes()
         {
-            throw new NotImplementedException();
+            return _route;
         }
 
-        public void AddRoute(int v1, string v2, int v3, double v4, double v5, double v6, double v7, double v8, double v9)
+        public void AddRoute(int carnr, string homebase, int cartype, double warrantyweekdayshours, double availabilityweekdayshours, double warrantyweekendhours, double availabilityweekendhours, double warrantyholidayhours, double availabilityholidayhours)
         {
-            throw new NotImplementedException();
+            Route route = new Route(carnr, homebase, cartype, warrantyweekdayshours, availabilityweekdayshours, warrantyweekendhours, availabilityweekendhours, warrantyholidayhours, availabilityholidayhours);
+            _route.Add(route);
         }
 
-        public Route GetRouteByID(int carNr)
+        public Route GetRouteByID(int carnr)
         {
-            throw new NotImplementedException();
+            Route result = null;
+            foreach (Route element in _route)
+            {
+                if (element.CarNr == carnr)
+                {
+                    result = element;
+                }
+            }
+            return result;
         }
 
-        public void DeleteRoute(int carNr)
+        public void DeleteRoute(int carnr)
         {
-            throw new NotImplementedException();
+            Route toDelete = this.GetRouteByID(carnr);
+            _route.Remove(toDelete);
         }
 
-        public List<Route> GetRoutesByCarType(int carType)
-        {
-            throw new NotImplementedException();
-        }
+        //public List<Route> GetRoutesByCarType(int carType)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
