@@ -45,9 +45,20 @@ namespace Core.UnitTests {
 		[TestMethod]
 		public void AddOfferFromText() {
 			_repoOffers.AddOffer(160867, _testRoute1, 284, _testContractor1, 0, 0);
-			Offer CompareOffer = _repoOffers.GetOfferByID(160867);
+			List<Offer> OffersList = _repoOffers.GetAllOffers();
+			Assert.IsTrue(OffersList.Contains(new Offer(160867, _testRoute1, 284, _testContractor1, 0, 0)));
+		}
+
+		[TestMethod]
+		public void GetOfferByID() {
+			_repoOffers.AddOffer(_testOffer1);
+			_repoOffers.AddOffer(_testOffer2);
+			_repoOffers.AddOffer(_testOffer3);
+
+			Offer CompareOffer = _repoOffers.GetOfferByID(_testOffer1.OfferSeqNr);
 			Assert.AreEqual(_testOffer1, CompareOffer); // Override the Equals method on Offer Class
 		}
+
 
 		[TestMethod]
 		public void DeleteOfferByID() {
