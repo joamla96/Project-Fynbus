@@ -91,7 +91,5 @@ namespace Core.UnitTests
             Assert.IsTrue(routes.Contains(_testRoute5));
             Assert.IsFalse(routes.Contains(_testRoute6));
         }
-
-        //integration test: update route if a contractor is deleted
     }
 }
