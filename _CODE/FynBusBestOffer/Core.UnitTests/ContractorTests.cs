@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Core.UnitTests
 {
     [TestClass]
-    class ContractorTests
+    public class ContractorTests
     {
         RepositoryContractors _repoContractors;
         // SeqNr, Name, Company, Email, CarType 2, 3, 5, 6, 7
@@ -50,6 +50,12 @@ namespace Core.UnitTests
             _repoContractors.AddContractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] { 0, 0, 2, 0, 0 });
             List<Contractor> contractorsList = _repoContractors.GetAllContractors();
             Assert.IsTrue(contractorsList.Contains(new Contractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] { 0, 0, 2, 0, 0 })));
+        }
+
+        [TestMethod]
+        public void GetContractorByID()
+        {
+            _repoContractors
         }
     }
 }

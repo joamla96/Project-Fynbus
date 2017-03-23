@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Core.IntegrationTests
 {
     [TestClass]
-    class RouteIntegrationTests
+    public class RouteIntegrationTests
     {
         RepositoryOffers _repoOffers;
         RepositoryRoutes _repoRoutes;

@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Core.UnitTests
 {
     [TestClass]
-	class RouteTests
+	public class RouteTests
 	{
         RepositoryRoutes _repoRoutes;
         // SeqNr, Name, Company, Email, CarType 2, 3, 5, 6, 7
