@@ -37,15 +37,29 @@ namespace Core {
              return result;
              
         }
-
-        public void DeleteOffer(int v)
+        public Offer GetOfferByContractor(Contractor contractor)
         {
-            throw new NotImplementedException();
+            Offer result = null;
+            foreach (Offer element in _offer)
+            {
+                if (element.Contractor == contractor)
+                {
+                    result = element;
+                }
+            }
+            return result;
+
+        }
+        public void DeleteOffer(int offerseqnr)
+        {
+            Offer toDelete = this.GetOfferByID(offerseqnr);
+            _offer.Remove(toDelete);
         }
 
         public void DeleteOffer(Contractor contractor)
         {
-            throw new NotImplementedException();
+            Offer toDelete = this.GetOfferByContractor(contractor);
+            _offer.Remove(toDelete);
         }
 
 
