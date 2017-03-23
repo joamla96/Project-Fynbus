@@ -29,5 +29,16 @@ namespace Core {
             this.WarrantyHolidayHours = warrantyholidayhours;
             this.AvailabilityHolidayHours = availabilityholidayhours;
         }
+
+        public override bool Equals(object obj)
+        {
+            bool result = false;
+            Route route = (Route)obj;
+            if (this.CarNr == route.CarNr)
+            {
+                result = true;
+            }
+            return result;
+        }
     }
 }

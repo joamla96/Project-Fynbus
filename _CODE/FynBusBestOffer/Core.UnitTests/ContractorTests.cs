@@ -67,6 +67,9 @@ namespace Core.UnitTests
         public void DeleteContractorByID()
         {
             _repoContractors.AddContractor(_testContractor1);
+            _repoContractors.DeleteContractor(_testContractor1.ContractorSeqNr);
+            List<Contractor> contractorsList = _repoContractors.GetAllContractors();
+            Assert.AreEqual(0, contractorsList.Count);
         }
     }
 }
