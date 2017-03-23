@@ -49,23 +49,23 @@ namespace Core.IntegrationTests
             _repoContractors = RepositoryContractors.Instance;
             _repoContractors.Clear();
 
-            _repoOffers.Add(_testOffer1);
-            _repoOffers.Add(_testOffer2);
-            _repoOffers.Add(_testOffer3);
-            _repoOffers.Add(_testOffer4);
-            _repoOffers.Add(_testOffer5);
-            _repoOffers.Add(_testOffer6);
-            _repoOffers.Add(_testOffer7);
+            _repoOffers.AddOffer(_testOffer1);
+            _repoOffers.AddOffer(_testOffer2);
+            _repoOffers.AddOffer(_testOffer3);
+            _repoOffers.AddOffer(_testOffer4);
+            _repoOffers.AddOffer(_testOffer5);
+            _repoOffers.AddOffer(_testOffer6);
+            _repoOffers.AddOffer(_testOffer7);
 
-            _repoRoutes.Add(_testRoute1);
-            _repoRoutes.Add(_testRoute2);
-            _repoRoutes.Add(_testRoute3);
-            _repoRoutes.Add(_testRoute4);
-            _repoRoutes.Add(_testRoute5);
+            _repoRoutes.AddRoute(_testRoute1);
+            _repoRoutes.AddRoute(_testRoute2);
+            _repoRoutes.AddRoute(_testRoute3);
+            _repoRoutes.AddRoute(_testRoute4);
+            _repoRoutes.AddRoute(_testRoute5);
 
-            _repoContractors.Add(_testContractor1);
-            _repoContractors.Add(_testContractor2);
-            _repoContractors.Add(_testContractor3);
+            _repoContractors.AddContractor(_testContractor1);
+            _repoContractors.AddContractor(_testContractor2);
+            _repoContractors.AddContractor(_testContractor3);
         }
     }
 }
