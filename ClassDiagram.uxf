@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>480</x>
       <y>410</y>
       <w>270</w>
       <h>160</h>
@@ -23,29 +23,29 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
+      <x>940</x>
       <y>410</y>
       <w>210</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>Offer
 --
-OfferSeqNr: integer
-Route: Route
-PricePerHour: integer
-RoutePriority: integer
-ContractorPriority: integer
-Contractor: Contractor
-TotalContractValue: double
++ OfferSeqNr: integer
++ Route: Route
++ PricePerHour: integer
++ RoutePriority: integer
++ ContractorPriority: integer
++ Contractor: Contractor
++ Tot1alContractValue: double
 --
-Equals(object obj)
-CompareTo(object OtherOffer)</panel_attributes>
++ Equals(object obj)
++ CompareTo(object OtherOffer)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
+      <x>740</x>
       <y>410</y>
       <w>220</w>
       <h>40</h>
@@ -58,14 +58,14 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>10</x>
       <y>410</y>
       <w>310</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>RepositoryContractor
 --
-Contractors: dictionary&lt;int, Contractor&gt; 
+- Contractors: List
 --
 CRUD (ID, NewValue);</panel_attributes>
     <additional_attributes/>
@@ -73,7 +73,7 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>310</x>
       <y>410</y>
       <w>190</w>
       <h>40</h>
@@ -86,22 +86,27 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1270</x>
+      <x>1280</x>
       <y>410</y>
       <w>310</w>
-      <h>80</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>RepositoryOffer
 --
-_offers: dictionary &lt;int, offer&gt;
+- _offers: list
 --
-CRUD (ID, NewValue);</panel_attributes>
++ GetAllOffers
++ AddOffer
++ GetOfferByID
++ GetOffersByContractor
++ DeleteOffer
++ Clear</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1130</x>
+      <x>1140</x>
       <y>410</y>
       <w>160</w>
       <h>40</h>
@@ -114,7 +119,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
+      <x>990</x>
       <y>280</y>
       <w>100</w>
       <h>40</h>
@@ -127,7 +132,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
+      <x>1030</x>
       <y>310</y>
       <w>30</w>
       <h>120</h>
@@ -138,7 +143,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
+      <x>910</x>
       <y>680</y>
       <w>270</w>
       <h>160</h>
@@ -160,14 +165,14 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>450</x>
       <y>680</y>
       <w>310</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>RepositoryRoutes
 --
-Routes: list&lt;routes&gt;
++ Routes: list&lt;routes&gt;
 --
 CRUD (ID, NewValue);</panel_attributes>
     <additional_attributes/>
@@ -175,7 +180,7 @@ CRUD (ID, NewValue);</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
+      <x>750</x>
       <y>680</y>
       <w>180</w>
       <h>40</h>
@@ -184,5 +189,18 @@ CRUD (ID, NewValue);</panel_attributes>
 m1=1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>580</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
