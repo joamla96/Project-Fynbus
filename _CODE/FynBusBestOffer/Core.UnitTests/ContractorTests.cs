@@ -71,8 +71,5 @@ namespace Core.UnitTests
             List<Contractor> contractorsList = _repoContractors.GetAllContractors();
             Assert.AreEqual(0, contractorsList.Count);
         }
-        
-        [TestMethod]
-        public void 
     }
 }
