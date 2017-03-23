@@ -39,9 +39,17 @@ namespace Core.UnitTests
         [TestMethod]
         public void AddContractorFromObject()
         {
-            _repoContractors.AddContractors(_testContractor1);
+            _repoContractors.AddContractor(_testContractor1);
             List<Contractor> contractorsList = _repoContractors.GetAllContractors();
             Assert.IsTrue(contractorsList.Contains(_testContractor1));
+        }
+
+        [TestMethod]
+        public void AddContractorFromText()
+        {
+            _repoContractors.AddContractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] { 0, 0, 2, 0, 0 });
+            List<Contractor> contractorsList = _repoContractors.GetAllContractors();
+            Assert.IsTrue(contractorsList.Contains(new Contractor(163460, "Navn A", "Firma A", "Apple@Email.com", new int[] { 0, 0, 2, 0, 0 })));
         }
     }
 }
