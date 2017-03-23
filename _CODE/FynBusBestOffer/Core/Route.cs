@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Core {
     public class Route
     {
-        private int CarNr;
-        private string HomeBase;
-        private int CarType;
-        private double WarrantyWeekdaysHours;
-        private double AvailabilityWeekdaysHours;
-        private double WarrantyWeekendHours;
-        private double AvailabilityWeekendHours;
-        private double WarrantyHolidayHours;
-        private double AvailabilityHolidayHours;
+        public int CarNr;
+        public string HomeBase;
+        public int CarType;
+        public double WarrantyWeekdaysHours;
+        public double AvailabilityWeekdaysHours;
+        public double WarrantyWeekendHours;
+        public double AvailabilityWeekendHours;
+        public double WarrantyHolidayHours;
+        public double AvailabilityHolidayHours;
 
         public Route(int carnr, string homebase, int cartype, double warrantyweekdayshours, double availabilityweekdayshours, double warrantyweekendhours, double availabilityweekendhours, double warrantyholidayhours, double availabilityholidayhours)
         {
