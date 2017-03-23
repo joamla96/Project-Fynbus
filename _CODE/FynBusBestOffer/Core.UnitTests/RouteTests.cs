@@ -19,6 +19,7 @@ namespace Core.UnitTests
         static Route _testRoute3 = new Route(2504, "OUH", 2, 9.5, 10.5, 0, 0, 9.5, 10.5);
         static Route _testRoute4 = new Route(2505, "OUH", 2, 9.5, 10.5, 0, 0, 0, 0);
         static Route _testRoute5 = new Route(2506, "Ørbækvej", 2, 9.5, 10.5, 0, 0, 0, 0);
+        static Route _testRoute6 = new Route(2507, "Ørbækvej", 3, 9.5, 10.5, 0, 0, 0, 0);
 
         // SeqNr, GarantiVognNr, Price/Hr, Contractor, RoutePrio, ContractorPrio
         static Offer _testOffer1 = new Offer(160867, _testRoute1, 284, _testContractor1, 0, 0);
@@ -72,6 +73,23 @@ namespace Core.UnitTests
         }
 
         [TestMethod]
-        public void 
+        public void GetRoutesFromRouteRepoByCarType()
+        {
+            _repoRoutes.AddRoute(_testRoute1);
+            _repoRoutes.AddRoute(_testRoute2);
+            _repoRoutes.AddRoute(_testRoute3);
+            _repoRoutes.AddRoute(_testRoute4);
+            _repoRoutes.AddRoute(_testRoute5);
+            _repoRoutes.AddRoute(_testRoute6);
+
+            List<Route> routes = _repoRoutes.GetRoutesByCarType(_testRoute1.CarType);
+
+            Assert.IsTrue(routes.Contains(_testRoute1));
+            Assert.IsTrue(routes.Contains(_testRoute2));
+            Assert.IsTrue(routes.Contains(_testRoute3));
+            Assert.IsTrue(routes.Contains(_testRoute4));
+            Assert.IsTrue(routes.Contains(_testRoute5));
+            Assert.IsFalse(routes.Contains(_testRoute6));
+        }
     }
 }
