@@ -24,4 +24,4 @@ B. How much it's going to cost to hire a specific contractor
 
 Why chaning from price/hr to total contract value? What effect are you expecting?
 
-If two Contractor, has the exacty same lowest price?
+If two Contractor, has the exacty same lowest price? => Most Cars available
