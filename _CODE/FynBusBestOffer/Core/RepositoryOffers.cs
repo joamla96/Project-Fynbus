@@ -20,15 +20,22 @@ namespace Core {
 
         public void AddOffer(int offerseqnr, Route route, int priceperhour, Contractor contractor, int routepriority, int contractorpriority)
         {
-            //Offer offer = new Offer( offerseqnr, carnr, priceperhour, contractor, routepriority, contractorpriority);
-            //_offer.AddRange();
-            
-           // _offer.Add(new Offer(offerseqnr, route, priceperhour, contractor, routepriority, contractorpriority) { });
+            Offer offer = new Offer( offerseqnr, route, priceperhour, contractor, routepriority, contractorpriority);
+            _offer.Add(offer);
         }
 
-        public Offer GetOfferByID(int v)
+        public Offer GetOfferByID(int offerseqnr)
         {
-            throw new NotImplementedException();
+            Offer result = null;
+            foreach (Offer element in _offer)
+            {
+                if(element.OfferSeqNr == offerseqnr)
+                {
+                    result = element;
+                }
+            }
+             return result;
+             
         }
 
         public void DeleteOffer(int v)
