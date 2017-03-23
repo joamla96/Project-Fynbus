@@ -38,15 +38,15 @@ namespace Core.UnitTests {
 		[TestMethod]
 		public void AddOfferFromObject() {
 			_repoOffers.AddOffer(_testOffer1);
-			List<Offer> OffersList = _repoOffers.GetAllOffers();
-			Assert.IsTrue(OffersList.Contains(_testOffer1));
+			List<Offer> offersList = _repoOffers.GetAllOffers();
+			Assert.IsTrue(offersList.Contains(_testOffer1));
 		}
 
 		[TestMethod]
 		public void AddOfferFromText() {
 			_repoOffers.AddOffer(160867, _testRoute1, 284, _testContractor1, 0, 0);
-			List<Offer> OffersList = _repoOffers.GetAllOffers();
-			Assert.IsTrue(OffersList.Contains(new Offer(160867, _testRoute1, 284, _testContractor1, 0, 0)));
+			List<Offer> offersList = _repoOffers.GetAllOffers();
+			Assert.IsTrue(offersList.Contains(new Offer(160867, _testRoute1, 284, _testContractor1, 0, 0)));
 		}
 
 		[TestMethod]
@@ -55,15 +55,36 @@ namespace Core.UnitTests {
 			_repoOffers.AddOffer(_testOffer2);
 			_repoOffers.AddOffer(_testOffer3);
 
-			Offer CompareOffer = _repoOffers.GetOfferByID(_testOffer1.OfferSeqNr);
-			Assert.AreEqual(_testOffer1, CompareOffer); // Override the Equals method on Offer Class
+			Offer compareOffer = _repoOffers.GetOfferByID(_testOffer1.OfferSeqNr);
+			Assert.AreEqual(_testOffer1, compareOffer); // Override the Equals method on Offer Class
 		}
 
+        [TestMethod]
+        public void GetOfferByContractor()
+        {
+            _repoOffers.AddOffer(_testOffer1);
+            _repoOffers.AddOffer(_testOffer2);
+            _repoOffers.AddOffer(_testOffer3);
+            _repoOffers.AddOffer(_testOffer4);
+            _repoOffers.AddOffer(_testOffer5);
+            _repoOffers.AddOffer(_testOffer6);
+            _repoOffers.AddOffer(_testOffer7);
 
-		[TestMethod]
+            List<Offer> offers = _repoOffers.GetOffersByContractor(_testContractor1);
+
+            Assert.IsTrue(offers.Contains(_testOffer1));
+            Assert.IsTrue(offers.Contains(_testOffer2));
+            Assert.IsTrue(offers.Contains(_testOffer3));
+            Assert.IsFalse(offers.Contains(_testOffer4));
+            Assert.IsFalse(offers.Contains(_testOffer5));
+            Assert.IsFalse(offers.Contains(_testOffer6));
+            Assert.IsFalse(offers.Contains(_testOffer7));
+        }
+
+        [TestMethod]
 		public void DeleteOfferByID() {
 			_repoOffers.AddOffer(_testOffer1);
-			_repoOffers.DeleteOffer(160867);
+			_repoOffers.DeleteOffer(_testOffer1.OfferSeqNr);
 			List<Offer> OffersList = _repoOffers.GetAllOffers();
 			Assert.AreEqual(0, OffersList.Count);
 		}
@@ -79,41 +100,42 @@ namespace Core.UnitTests {
 			_repoOffers.AddOffer(_testOffer7);
 
 			_repoOffers.DeleteOffer(_testContractor1);
-			List<Offer> OffersList = _repoOffers.GetAllOffers();
-			Assert.AreEqual(4, OffersList.Count);
+			List<Offer> offersList = _repoOffers.GetAllOffers();
+			Assert.AreEqual(4, offersList.Count);
 		}
 
 		[TestMethod]
 		public void OrderOffersGetTotalContractValue1() {
-			double TotalContractValue = _testOffer1.TotalContractValue; // Total Contract Value should be a property
-			Assert.AreEqual(TotalContractValue, 284);
+			double totalContractValue = _testOffer1.TotalContractValue; // Total Contract Value should be a property
+			Assert.AreEqual(totalContractValue, 284);
 		}
 
 		[TestMethod]
 		public void OrderOffersGetTotalContractValue2() {
-			double TotalContractValue = _testOffer2.TotalContractValue;
-			Assert.AreEqual(TotalContractValue, 300);
+			double totalContractValue = _testOffer2.TotalContractValue;
+			Assert.AreEqual(totalContractValue, 300);
 		}
 
-		//[TestMethod]
-		//public void GetRightOffersFromOfferRepo() {
-		//	_repoOffers.Add(_testOffer1);
-		//	_repoOffers.Add(_testOffer2);
-		//	_repoOffers.Add(_testOffer3);
-		//	_repoOffers.Add(_testOffer4);
-		//	_repoOffers.Add(_testOffer5);
-		//	_repoOffers.Add(_testOffer6);
-		//	_repoOffers.Add(_testOffer7);
+        //[TestMethod]
+        //public void GetRightOffersFromOfferRepo()
+        //{
+        //    _repoOffers.AddOffer(_testOffer1);
+        //    _repoOffers.AddOffer(_testOffer2);
+        //    _repoOffers.AddOffer(_testOffer3);
+        //    _repoOffers.AddOffer(_testOffer4);
+        //    _repoOffers.AddOffer(_testOffer5);
+        //    _repoOffers.AddOffer(_testOffer6);
+        //    _repoOffers.AddOffer(_testOffer7);
 
-		//	List<Offer> Offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
+        //    List<Offer> offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
 
-		//	Assert.IsTrue(Offers.Contains(_testOffer1));
-		//	Assert.IsTrue(Offers.Contains(_testOffer2));
-		//	Assert.IsFalse(Offers.Contains(_testOffer3));
-		//	Assert.IsFalse(Offers.Contains(_testOffer4));
-		//	Assert.IsFalse(Offers.Contains(_testOffer5));
-		//	Assert.IsFalse(Offers.Contains(_testOffer6));
-		//	Assert.IsFalse(Offers.Contains(_testOffer7));
-		//}
-	}
+        //    Assert.IsTrue(offers.Contains(_testOffer1));
+        //    Assert.IsTrue(offers.Contains(_testOffer2));
+        //    Assert.IsFalse(offers.Contains(_testOffer3));
+        //    Assert.IsFalse(offers.Contains(_testOffer4));
+        //    Assert.IsFalse(offers.Contains(_testOffer5));
+        //    Assert.IsFalse(offers.Contains(_testOffer6));
+        //    Assert.IsFalse(offers.Contains(_testOffer7));
+        //}
+    }
 }
