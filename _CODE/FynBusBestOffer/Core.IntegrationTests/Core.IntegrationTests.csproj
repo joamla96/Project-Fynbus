@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContractorIntegrationTests.cs" />
     <Compile Include="GetBestOffer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteIntegrationTests.cs" />

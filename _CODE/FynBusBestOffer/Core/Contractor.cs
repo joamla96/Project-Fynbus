@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Core {
     public class Contractor
     {
-        private int ContractorSeqNr;
-        private string ContractorName;
-        private string CompanyName;
-        private string CompanyEmail;
-        private int[] CarTypeArray;
+        public int ContractorSeqNr;
+        public string ContractorName;
+        public string CompanyName;
+        public string CompanyEmail;
+        public int[] CarTypeArray;
 
         public Contractor(int contractorseqnr, string contractorname, string companyname, string companyemail, int[] cartypearray)
         {
@@ -24,6 +24,16 @@ namespace Core {
 
         public Contractor()
         {
+        }
+        public override bool Equals(object obj)
+        {
+            bool result = false;
+            Contractor contractor = (Contractor)obj;
+            if (this.ContractorSeqNr == contractor.ContractorSeqNr)
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }

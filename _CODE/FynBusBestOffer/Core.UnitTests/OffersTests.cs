@@ -116,6 +116,12 @@ namespace Core.UnitTests {
 			Assert.AreEqual(totalContractValue, 300);
 		}
 
+        [TestMethod]
+        public void OfferIsIComparable()
+        {
+            Assert.IsTrue(_testOffer1 is IComparable);
+        }
+
         //[TestMethod]
         //public void GetRightOffersFromOfferRepo()
         //{
