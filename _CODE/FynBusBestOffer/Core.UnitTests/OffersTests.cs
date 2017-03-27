@@ -90,7 +90,7 @@ namespace Core.UnitTests {
 			_repoOffers.AddOffer(_testOffer6);
 			_repoOffers.AddOffer(_testOffer7);
 
-			List<Offer> offers _repoOffers.GetOffers(_testRoute1);
+			List<Offer> offers = _repoOffers.GetOffers(_testRoute1);
 
 			Assert.IsTrue(offers.Contains(_testOffer1));
 			Assert.IsTrue(offers.Contains(_testOffer2));
