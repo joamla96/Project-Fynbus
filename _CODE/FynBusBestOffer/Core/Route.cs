@@ -17,6 +17,8 @@ namespace Core {
         public double WarrantyHolidayHours;
         public double AvailabilityHolidayHours;
 
+        public Contractor Contractor { get; set; }
+
         public Route(int carnr, string homebase, int cartype, double warrantyweekdayshours, double availabilityweekdayshours, double warrantyweekendhours, double availabilityweekendhours, double warrantyholidayhours, double availabilityholidayhours)
         {
             this.CarNr = carnr;
@@ -39,6 +41,11 @@ namespace Core {
                 result = true;
             }
             return result;
+        }
+
+        public Offer GetBestOffer()
+        {
+            throw new NotImplementedException();
         }
     }
 }

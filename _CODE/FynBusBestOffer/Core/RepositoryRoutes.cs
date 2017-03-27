@@ -9,6 +9,8 @@ namespace Core {
     {
         List<Route> _route = new List<Route>();
 
+        public static RepositoryRoutes Instance { get; set; }
+
         public void AddRoute(Route route)
         {
             _route.Add(route);
@@ -44,9 +46,11 @@ namespace Core {
             _route.Remove(toDelete);
         }
 
-        //public List<Route> GetRoutesByCarType(int carType)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public void Clear()
+        {
+            _route.Clear();
+        }
+
+       
     }
 }

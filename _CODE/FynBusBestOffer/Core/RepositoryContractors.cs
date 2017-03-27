@@ -8,6 +8,9 @@ namespace Core {
     public class RepositoryContractors
     {
         List<Contractor> _contractor = new List<Contractor>();
+
+        public static RepositoryContractors Instance { get; set; }
+
         public void AddContractor(Contractor contractor)
         {
             _contractor.Add(contractor);
@@ -41,6 +44,11 @@ namespace Core {
         {
             Contractor toDelete = this.GetContractorByID(contractorseqnr);
             _contractor.Remove(toDelete);
+        }
+
+        public void Clear()
+        {
+            _contractor.Clear();
         }
     }
 }

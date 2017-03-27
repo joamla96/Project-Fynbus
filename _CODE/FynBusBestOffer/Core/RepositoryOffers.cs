@@ -8,6 +8,9 @@ namespace Core {
     public class RepositoryOffers
     {
         List<Offer> _offer = new List<Offer>();
+
+        public static RepositoryOffers Instance { get; set; }
+
         public void AddOffer(Offer offer)
         {
             _offer.Add(offer);
@@ -69,7 +72,7 @@ namespace Core {
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _offer.Clear();
         }
     }
 }
