@@ -9,7 +9,8 @@ namespace Core {
     {
         List<Offer> _offer = new List<Offer>();
 
-        public static RepositoryOffers Instance { get; set; }
+        private static RepositoryOffers _instance = new RepositoryOffers();
+        public static RepositoryOffers Instance { get { return _instance; } }
 
         public void AddOffer(Offer offer)
         {

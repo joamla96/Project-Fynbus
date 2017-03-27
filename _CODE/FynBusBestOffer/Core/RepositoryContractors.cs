@@ -9,7 +9,8 @@ namespace Core {
     {
         List<Contractor> _contractor = new List<Contractor>();
 
-        public static RepositoryContractors Instance { get; set; }
+        private static RepositoryContractors _instance = new RepositoryContractors();
+        public static RepositoryContractors Instance { get {return _instance; } }
 
         public void AddContractor(Contractor contractor)
         {
