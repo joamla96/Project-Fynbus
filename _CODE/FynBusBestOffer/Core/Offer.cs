@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Core {
-    public class Offer
+    public class Offer : IComparable
     {
         public int OfferSeqNr;
         public Route Route;
@@ -36,6 +36,22 @@ namespace Core {
             if (this.OfferSeqNr == offer.OfferSeqNr)
             {
                 result = true;
+            }
+            return result;
+        }
+
+        public int CompareTo(object obj)
+        {
+            int result = 0;
+            Offer offers = (Offer)obj;
+
+            if (this.TotalContractValue < offers.TotalContractValue)
+            {
+                result = -1;
+            }
+            else if (this.TotalContractValue > offers.TotalContractValue)
+            {
+                result = 1;
             }
             return result;
         }

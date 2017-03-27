@@ -45,7 +45,12 @@ namespace Core {
 
         public Offer GetBestOffer()
         {
-            throw new NotImplementedException();
+            RepositoryOffers offers = RepositoryOffers.Instance;
+            List<Offer> listOfOffersForRoute = offers.GetOffers(this);
+
+            listOfOffersForRoute.Sort();
+            return listOfOffersForRoute[0];
+
         }
     }
 }
