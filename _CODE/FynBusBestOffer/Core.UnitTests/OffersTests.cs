@@ -70,7 +70,7 @@ namespace Core.UnitTests {
             _repoOffers.AddOffer(_testOffer6);
             _repoOffers.AddOffer(_testOffer7);
 
-            List<Offer> offers = _repoOffers.GetOffersByContractor(_testContractor1);
+            List<Offer> offers = _repoOffers.GetOffers(_testContractor1);
 
             Assert.IsTrue(offers.Contains(_testOffer1));
             Assert.IsTrue(offers.Contains(_testOffer2));
@@ -80,6 +80,26 @@ namespace Core.UnitTests {
             Assert.IsFalse(offers.Contains(_testOffer6));
             Assert.IsFalse(offers.Contains(_testOffer7));
         }
+
+		public void GetOfferByRoute() {
+			_repoOffers.AddOffer(_testOffer1);
+			_repoOffers.AddOffer(_testOffer2);
+			_repoOffers.AddOffer(_testOffer3);
+			_repoOffers.AddOffer(_testOffer4);
+			_repoOffers.AddOffer(_testOffer5);
+			_repoOffers.AddOffer(_testOffer6);
+			_repoOffers.AddOffer(_testOffer7);
+
+			List<Offer> offers _repoOffers.GetOffers(_testRoute1);
+
+			Assert.IsTrue(offers.Contains(_testOffer1));
+			Assert.IsTrue(offers.Contains(_testOffer2));
+			Assert.IsFalse(offers.Contains(_testOffer3));
+			Assert.IsFalse(offers.Contains(_testOffer4));
+			Assert.IsFalse(offers.Contains(_testOffer5));
+			Assert.IsFalse(offers.Contains(_testOffer6));
+			Assert.IsFalse(offers.Contains(_testOffer7));
+		}
 
         [TestMethod]
 		public void DeleteOfferByID() {
