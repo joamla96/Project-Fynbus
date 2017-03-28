@@ -9,7 +9,8 @@ namespace Core {
     {
         List<Route> _route = new List<Route>();
 
-        public static RepositoryRoutes Instance { get; set; }
+        private static RepositoryRoutes _instance = new RepositoryRoutes();
+        public static RepositoryRoutes Instance { get { return _instance; } }
 
         public void AddRoute(Route route)
         {

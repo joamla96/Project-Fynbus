@@ -51,6 +51,8 @@ namespace Core {
             listOfOffersForRoute.Sort();
             return listOfOffersForRoute[0];
 
+
+
         }
     }
 }

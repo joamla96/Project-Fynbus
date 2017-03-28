@@ -77,9 +77,9 @@ namespace Core.IntegrationTests
 		}
 
 		[TestMethod]
-		public void WinningOfferDecreasesCarAmount() {
+		public void WinningOfferIncreasesCarTypeWonAmount() {
 			Offer bestOffer = _testRoute1.GetBestOffer();
-			Assert.AreEqual(0, _testContractor3.CarTypeArray[0]);
+			Assert.AreEqual(1, _testContractor3.CarTypeWonArray[0]);
 		}
 
 		[TestMethod]
