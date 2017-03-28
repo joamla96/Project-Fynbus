@@ -71,5 +71,11 @@ namespace Core.UnitTests
             List<Contractor> contractorsList = _repoContractors.GetAllContractors();
             Assert.AreEqual(0, contractorsList.Count);
         }
+
+        [TestMethod]
+        public void ContractorHasArrayForWonCars()
+        {
+            Assert.AreEqual(_testContractor1.CarTypeWonArray, new int[] { 0, 0, 0, 0, 0 });
+        }
     }
 }
