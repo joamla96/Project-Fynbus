@@ -153,7 +153,7 @@ namespace Core.UnitTests {
         //    _repoOffers.AddOffer(_testOffer6);
         //    _repoOffers.AddOffer(_testOffer7);
 
-        //    List<Offer> offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
+        //    List<Offer> offers = _repoOffers.GetOffersByCarNr(_testRoute1.CarNr);
 
         //    Assert.IsTrue(offers.Contains(_testOffer1));
         //    Assert.IsTrue(offers.Contains(_testOffer2));
