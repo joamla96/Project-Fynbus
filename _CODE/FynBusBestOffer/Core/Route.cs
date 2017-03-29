@@ -47,12 +47,58 @@ namespace Core {
         {
             RepositoryOffers offers = RepositoryOffers.Instance;
             List<Offer> listOfOffersForRoute = offers.GetOffers(this);
-
+            int index = 0;
             listOfOffersForRoute.Sort();
-            return listOfOffersForRoute[0];
+            Offer bestOffer = listOfOffersForRoute[index];
+            int x = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];
+            int y = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
 
+            private bool foundBestOffer = false;
+            do
+            {
+                if (x < y)
+                {
+                    throw new Exception("code is BROKEEEEEEEEEEEEEEEEEN");
+                }
+                else if (y < x)
+                {
+                    return bestOffer;
+                }
+                else if (x == y)
+                {
+                    bestOffer = listOfOffersForRoute[index + 1];
+                }
+            }
+            while
+               
 
+        }
 
+        public int GetCarTypeForArray(int cartype)
+        {
+            int index;
+            switch (cartype)
+            {
+                case 2:
+                    index = 0;
+                    break;
+                case 3:
+                    index = 1;
+                    break;
+                case 5:
+                    index = 2;
+                    break;
+                case 6:
+                    index = 3;
+                    break;
+                case 7:
+                    index = 4;
+                    break;
+                default:
+                    throw new IndexOutOfRangeException();
+                        
+            }
+            return index;
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Core {
         public string CompanyEmail;
         public int[] CarTypeArray;
 
+        public int[] CarTypeWonArray;
+
         public Contractor(int contractorseqnr, string contractorname, string companyname, string companyemail, int[] cartypearray)
         {
             this.ContractorSeqNr = contractorseqnr;
@@ -20,6 +22,7 @@ namespace Core {
             this.CompanyName = companyname;
             this.CompanyEmail = companyemail;
             this.CarTypeArray = cartypearray;
+            this.CarTypeWonArray = new int[] { 0, 0, 0, 0, 0 };
         }
 
         public Contractor()
