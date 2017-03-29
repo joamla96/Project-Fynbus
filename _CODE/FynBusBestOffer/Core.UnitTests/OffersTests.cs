@@ -105,8 +105,8 @@ namespace Core.UnitTests {
 		public void DeleteOfferByID() {
 			_repoOffers.AddOffer(_testOffer1);
 			_repoOffers.DeleteOffer(_testOffer1.OfferSeqNr);
-			List<Offer> OffersList = _repoOffers.GetAllOffers();
-			Assert.AreEqual(0, OffersList.Count);
+			List<Offer> offersList = _repoOffers.GetAllOffers();
+			Assert.AreEqual(0, offersList.Count);
 		}
 
 		[TestMethod]
