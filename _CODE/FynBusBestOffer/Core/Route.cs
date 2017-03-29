@@ -50,26 +50,30 @@ namespace Core {
             int index = 0;
             listOfOffersForRoute.Sort();
             Offer bestOffer = listOfOffersForRoute[index];
-            int x = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];
-            int y = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
+            
 
-            private bool foundBestOffer = false;
+            bool foundBestOffer = false;
             do
             {
+                int x = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];//checking index not amount in this index.... im just stupid ;)
+                int y = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
+
                 if (x < y)
                 {
-                    throw new Exception("code is BROKEEEEEEEEEEEEEEEEEN");
+                    throw new Exception("Code is BROKEEEEEEEEEEEEEEEEEN!!!! Help! HELP! HEEELP!!!!!");
                 }
                 else if (y < x)
                 {
-                    return bestOffer;
+                    foundBestOffer = true;
+                    y = y + 1;
                 }
                 else if (x == y)
                 {
                     bestOffer = listOfOffersForRoute[index + 1];
                 }
             }
-            while
+            while (foundBestOffer == false);
+            return bestOffer;
                
 
         }
