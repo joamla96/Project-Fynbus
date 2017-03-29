@@ -75,7 +75,12 @@ namespace Core.UnitTests
         [TestMethod]
         public void ContractorHasArrayForWonCars()
         {
-            Assert.AreEqual(_testContractor1.CarTypeWonArray, new int[] { 0, 0, 0, 0, 0 });
+            int total = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                total += _testContractor1.CarTypeWonArray[i];
+            }
+            Assert.AreEqual(0, total);
         }
     }
 }
