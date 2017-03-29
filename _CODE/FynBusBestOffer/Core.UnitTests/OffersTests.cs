@@ -105,8 +105,8 @@ namespace Core.UnitTests {
 		public void DeleteOfferByID() {
 			_repoOffers.AddOffer(_testOffer1);
 			_repoOffers.DeleteOffer(_testOffer1.OfferSeqNr);
-			List<Offer> OffersList = _repoOffers.GetAllOffers();
-			Assert.AreEqual(0, OffersList.Count);
+			List<Offer> offersList = _repoOffers.GetAllOffers();
+			Assert.AreEqual(0, offersList.Count);
 		}
 
 		[TestMethod]
@@ -153,7 +153,7 @@ namespace Core.UnitTests {
         //    _repoOffers.AddOffer(_testOffer6);
         //    _repoOffers.AddOffer(_testOffer7);
 
-        //    List<Offer> offers = _repoOffers.getOffersByCarNr(_testRoute1.CarNr);
+        //    List<Offer> offers = _repoOffers.GetOffersByCarNr(_testRoute1.CarNr);
 
         //    Assert.IsTrue(offers.Contains(_testOffer1));
         //    Assert.IsTrue(offers.Contains(_testOffer2));
