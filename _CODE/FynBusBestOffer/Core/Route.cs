@@ -55,19 +55,19 @@ namespace Core {
             bool foundBestOffer = false;
             do
             {
-                int x = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];//checking index not amount in this index.... im just stupid ;)
-                int y = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
+                int indexForCheckingStartCarAmount = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];
+                int indexForCheckingWonCarAmount = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
 
-                if (x < y)
+                if (bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount] < bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount])
                 {
                     throw new Exception("Code is BROKEEEEEEEEEEEEEEEEEN!!!! Help! HELP! HEEELP!!!!!");
                 }
-                else if (y < x)
+                else if (bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] < bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount])
                 {
                     foundBestOffer = true;
-                    y = y + 1;
+                    bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] = bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] + 1;
                 }
-                else if (x == y)
+                else if (bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount] == bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount])
                 {
                     bestOffer = listOfOffersForRoute[index + 1];
                 }
