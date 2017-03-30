@@ -58,13 +58,13 @@ namespace Core
 					// This... should NEVER EVER EVER happen... j.i.c.
 					throw new Exception("Exception: A contractor has won more cars than they can offer.");
 				} else if (wonCarAmount < startCarAmount) {
-					foundBestOffer = true;
-					bestOffer.Contractor.WonCarOfType(this.CarType);
+					foundBestOffer = true;					
 				} else if (startCarAmount == wonCarAmount) {
 					bestOffer = listOfOffersForRoute[index + 1];
 				}
 			} while (foundBestOffer == false);
 
+			bestOffer.Contractor.WonCarOfType(this.CarType);
 			this.OfferWon = bestOffer;
 
 			return bestOffer;
