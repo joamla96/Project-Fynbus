@@ -55,24 +55,26 @@ namespace Core {
             bool foundBestOffer = false;
             do
             {
-                int indexForCheckingStartCarAmount = bestOffer.Contractor.CarTypeArray[GetCarTypeForArray(this.CarType)];
-                int indexForCheckingWonCarAmount = bestOffer.Contractor.CarTypeWonArray[GetCarTypeForArray(this.CarType)];
+                int arrIndex = GetCarTypeForArray(this.CarType);
+                int startCarAmount = bestOffer.Contractor.CarTypeArray[arrIndex];
+                int wonCarAmount = bestOffer.Contractor.CarTypeWonArray[arrIndex];
 
-                if (bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount] < bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount])
+                if (startCarAmount < wonCarAmount)
                 {
                     throw new Exception("Code is BROKEEEEEEEEEEEEEEEEEN!!!! Help! HELP! HEEELP!!!!!");
                 }
-                else if (bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] < bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount])
+                else if (wonCarAmount < startCarAmount)
                 {
                     foundBestOffer = true;
-                    bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] = bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount] + 1;
+                    wonCarAmount = wonCarAmount + 1;
                 }
-                else if (bestOffer.Contractor.CarTypeArray[indexForCheckingStartCarAmount] == bestOffer.Contractor.CarTypeWonArray[indexForCheckingWonCarAmount])
+                else if (startCarAmount == wonCarAmount)
                 {
                     bestOffer = listOfOffersForRoute[index + 1];
                 }
             }
             while (foundBestOffer == false);
+
             return bestOffer;
                
 
