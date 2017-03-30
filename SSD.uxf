@@ -20,7 +20,7 @@
       <w>96</w>
       <h>36</h>
     </coordinates>
-    <panel_attributes>System</panel_attributes>
+    <panel_attributes>_System_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -81,7 +81,7 @@ Selects file import feature</panel_attributes>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;
-Navigat, and select file on local system</panel_attributes>
+Navigate and select file on local system</panel_attributes>
     <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
   </element>
   <element>
