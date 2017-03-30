@@ -17,7 +17,7 @@ namespace Core {
         public double WarrantyHolidayHours;
         public double AvailabilityHolidayHours;
 
-        public Contractor Contractor { get; set; }
+        public Offer OfferWon { get; set; }
 
         public Route(int carnr, string homebase, int cartype, double warrantyweekdayshours, double availabilityweekdayshours, double warrantyweekendhours, double availabilityweekendhours, double warrantyholidayhours, double availabilityholidayhours)
         {
@@ -66,7 +66,7 @@ namespace Core {
                 else if (wonCarAmount < startCarAmount)
                 {
                     foundBestOffer = true;
-                    wonCarAmount = wonCarAmount + 1;
+                    bestOffer.Contractor.CarTypeWonArray[arrIndex]++;
                 }
                 else if (startCarAmount == wonCarAmount)
                 {
@@ -74,6 +74,8 @@ namespace Core {
                 }
             }
             while (foundBestOffer == false);
+
+            this.OfferWon = bestOffer;
 
             return bestOffer;
                
