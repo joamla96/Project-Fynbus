@@ -81,6 +81,7 @@ namespace Core.UnitTests {
             Assert.IsFalse(offers.Contains(_testOffer7));
         }
 
+		[TestMethod]
 		public void GetOfferByRoute() {
 			_repoOffers.AddOffer(_testOffer1);
 			_repoOffers.AddOffer(_testOffer2);
