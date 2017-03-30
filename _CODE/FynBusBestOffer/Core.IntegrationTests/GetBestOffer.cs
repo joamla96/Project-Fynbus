@@ -88,8 +88,8 @@ namespace Core.IntegrationTests
 			Offer bestOfferR1 = _testRoute1.GetBestOffer();
 			Offer bestOfferR2 = _testRoute2.GetBestOffer();
 
-			Assert.AreEqual(_testRoute1.WinningOffer, bestOfferR1);
-			Assert.AreEqual(_testRoute2.WinningOffer, bestOfferR2);
+			Assert.AreEqual(_testRoute1.OfferWon, bestOfferR1);
+			Assert.AreEqual(_testRoute2.OfferWon, bestOfferR2);
 		}
 	}
 }
