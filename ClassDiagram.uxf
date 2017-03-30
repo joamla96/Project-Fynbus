@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>290</y>
+      <x>500</x>
+      <y>280</y>
       <w>270</w>
-      <h>160</h>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Contractor
 --
@@ -17,17 +17,16 @@
 + CompanyEmail: string 
 + CarTypeArray: int[]
 + CarTypeWonArray: int[]
-+ Offers: List&lt;Offer&gt; 
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>290</y>
+      <x>960</x>
+      <y>280</y>
       <w>210</w>
-      <h>180</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>Offer
 --
@@ -40,33 +39,36 @@
 + TotalContractValue: double
 --
 + Equals(object obj)
-+ CompareTo(object OtherOffer)</panel_attributes>
++ CompareTo(object OtherOffer)
++ GetTotalContrctValue()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>290</y>
+      <x>760</x>
+      <y>280</y>
       <w>220</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..1
+m1=1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>290</y>
+      <x>30</x>
+      <y>280</y>
       <w>310</w>
-      <h>160</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>RepositoryContractors
 --
 - _contractors: List&lt;Contractor&gt;
+- _instance: RepositoryContractors
++ Instance
 --
 + AddContractor(Contractor)
 + AddContractor(seqnr, uname, name, emai...)
@@ -79,8 +81,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
-      <y>290</y>
+      <x>330</x>
+      <y>280</y>
       <w>190</w>
       <h>40</h>
     </coordinates>
@@ -92,14 +94,16 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1270</x>
-      <y>290</y>
+      <x>1300</x>
+      <y>280</y>
       <w>310</w>
-      <h>200</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>RepositoryOffers
 --
 - _offers: List&lt;Offer&gt;
+- _instance: RepositoryContractors
++ Instance
 --
 + GetAllOffers()
 + AddOffer(offer)
@@ -115,8 +119,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1130</x>
-      <y>290</y>
+      <x>1160</x>
+      <y>280</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
@@ -128,8 +132,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>160</y>
+      <x>1010</x>
+      <y>150</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -141,8 +145,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
-      <y>190</y>
+      <x>1050</x>
+      <y>180</y>
       <w>30</w>
       <h>120</h>
     </coordinates>
@@ -152,8 +156,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>560</y>
+      <x>930</x>
+      <y>600</y>
       <w>270</w>
       <h>240</h>
     </coordinates>
@@ -178,14 +182,16 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>560</y>
+      <x>460</x>
+      <y>600</y>
       <w>310</w>
-      <h>150</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>RepositoryRoutes
 --
 + _routes: List&lt;Route&gt;
+- _instance: RepositoryContractors
++ Instance
 --
 + AddRoute(route)
 + AddRoute(carnr, home, cartype, ...)
@@ -199,151 +205,27 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>560</y>
-      <w>180</w>
+      <x>760</x>
+      <y>600</y>
+      <w>190</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
-    <coordinates>
-      <x>1020</x>
-      <y>460</y>
-      <w>50</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>20</x>
-      <y>90</y>
-      <w>360</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>General QA
-Instance should be included with properties in
-RepositoryOffers, RepositoryRoutes and
-RepositoryContractors
-difference in naming for the lists in the repositories
-eg. _route vs _routes, i like _routes
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>580</x>
-      <y>180</y>
-      <w>330</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>Can an offer have no contractor?
-if a contractor is removed the offer should be aswell
-DeleteOffer(Contractor) in offers repository
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>750</x>
-      <y>230</y>
-      <w>40</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>20.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
     <coordinates>
       <x>1050</x>
-      <y>210</y>
-      <w>210</w>
-      <h>40</h>
+      <y>470</y>
+      <w>50</w>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>Should GetTotalContactValue be
-included here in the methods?
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1090</x>
-      <y>240</y>
-      <w>40</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;20.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>210</x>
-      <y>480</y>
-      <w>330</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Contractor does not have a list of offers in the code
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>390</x>
-      <y>410</y>
-      <w>100</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>640</x>
-      <y>490</y>
-      <w>350</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>This should be switched one route can have many offer,
-but one offer can only have one route
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>980</x>
-      <y>480</y>
-      <w>70</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>980</x>
-      <y>500</y>
-      <w>70</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;40.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
