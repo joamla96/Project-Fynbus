@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,5 +56,12 @@ namespace Core {
             }
             return result;
         }
-    }
+
+		public override string ToString() {
+			StringWriter Output = new StringWriter();
+			Output.WriteLine(OfferSeqNr);
+
+			return Output.ToString();
+		}
+	}
 }
