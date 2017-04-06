@@ -1,0 +1,10 @@
+How we could have used TDD
+ - Test cases
+    - More conditions
+    - Testing extremes
+
+More evaluation
+Describe our SCRUM process
+What we'll hand over to fynbus, and can use our project for
+
+Conclusion
